@@ -1,35 +1,168 @@
-// 1 exercise
-let people_Tc = 36.6;
-let people_Tf = (9 / 5) * people_Tc + 32;
-alert(people_Tf);
+// Ex1
 
-// 2 exercise
-let name = "Василий";
-let admin = name;
-console.log(admin);
+for (let i = 0; i < 11; i++) {
+    if (i == 0) {
+        console.log(i + " - ноль");
+    } else if (i % 2 == 0) {
+        console.log(i + " - нечетное число");
+    } else if (i % 2 == 1) {
+        console.log(i + " - четное число");
+    }
+}
 
-// 3 exercise
-let sum1 = 10 + 10 + "10"
-console.log(sum1)
 
-let sum2 = 10 + "10" + 10
-console.log(sum2)
+// Ex2
+const post = {
 
-let sum3 = 10 + 10 + +"10"
-console.log(sum3)
+    author: "John", //вывести этот текст
 
-let sum4 = 10 / -""
-console.log(sum4)
+    postId: 23,
 
-let sum5 = 10 / +"2,5"
-console.log(sum5)
+    comments: [
 
-/*
+        {
 
-1. 10 добавдяем 10 получаем 20, 20 склеиваем с строкой 10 
-2. т.к ассоциативность с лева на права 10 становиться строкой и склеиваеться с первой 10 и третей 10
-3. "+" перед строкой делает числом, поэтому 10 + 10 + 10 = 30
-4. в скобках ничего нету, поэтому "-" добавляеться к нулю и получаем -бесконечность
-5. не целые числа пишуться через точку, поэтому Nan
+            userId: 10,
 
-*/
+            userName: "Alex",
+
+            text: "lorem ipsum",
+
+            rating: {
+
+                likes: 10,
+
+                dislikes: 2 //вывести это число
+
+            }
+
+        },
+
+        {
+
+            userId: 5, //вывести это число
+
+            userName: "Jane",
+
+            text: "lorem ipsum 2", //вывести этот текст
+
+            rating: {
+
+                likes: 3,
+
+                dislikes: 1
+
+            }
+
+        },
+
+    ]
+
+};
+
+
+console.log(post.author)
+console.log(post.comments[0].rating.dislikes)
+console.log(post.comments[1].userId)
+console.log(post.comments[1].text)
+
+
+Ex3
+const products = [
+
+    {
+
+        id: 3,
+
+        price: 200,
+
+    },
+
+    {
+
+        id: 4,
+
+        price: 900,
+
+    },
+
+    {
+
+        id: 1,
+
+        price: 1000,
+
+    },
+
+];
+
+
+products.forEach(sale => {sale.price *= 0.85});
+
+console.log(products);
+
+
+// Ex4
+const products = [
+
+    {
+
+        id: 3,
+
+        price: 127,
+
+        photos: [
+
+            "1.jpg",
+
+            "2.jpg",
+
+        ]
+
+    },
+
+    {
+
+        id: 5,
+
+        price: 499,
+
+        photos: []
+
+    },
+
+    {
+
+        id: 10,
+
+        price: 26,
+
+        photos: [
+
+            "3.jpg"
+
+        ]
+
+    },
+
+    {
+
+        id: 8,
+
+        price: 78,
+
+    },
+
+];
+
+
+const filterPhotos = products.filter(photo => {photo.photos.length > 0});
+console.log(filterPhotos);
+
+
+// Ex6
+let b = "x"
+
+for (let i = "x"; i.length <= 20; i + "x") {
+    console.log(i);
+}

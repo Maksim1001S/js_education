@@ -67,7 +67,7 @@ console.log(post.comments[1].userId)
 console.log(post.comments[1].text)
 
 
-Ex3
+// Ex3
 const products = [
 
     {
@@ -97,13 +97,13 @@ const products = [
 ];
 
 
-products.forEach(sale => {sale.price *= 0.85});
+products.forEach(sale => { sale.price *= 0.85 });
 
 console.log(products);
 
 
 // Ex4
-const products = [
+const productses = [
 
     {
 
@@ -156,13 +156,13 @@ const products = [
 ];
 
 
-const filterPhotos = products.filter(photo => {photo.photos.length > 0});
+const filterPhotos = productses.filter(client => "photos" in client && client.photos.length > 0);
 console.log(filterPhotos);
 
 
 // Ex6
 let b = "x"
 
-for (let i = "x"; i.length <= 20; i + "x") {
+for (let i = "x"; i.length <= 20; i = i + "x") {
     console.log(i);
 }
